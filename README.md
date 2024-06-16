@@ -1,4 +1,4 @@
-# Automatic-Plant-Watering-System
+# Automatic-Plant-Watering-System with Raspberry Pi
 
 ## Set up Steps:
 ### - encrypt MicroSD card with Raspberry Pi OS
