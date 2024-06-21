@@ -25,3 +25,6 @@
  - place the water pump inside a container with water and the plastic tubing inside a recipient container 
  - run the command: python test_pump.py
  - the water pump should pump water into the empty container for 5 seconds
+### - install python dependencies 
+- install libraries from requirements.txt file
+
