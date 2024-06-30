@@ -6,8 +6,11 @@
  - jumper wires
  - submersible water pump
  - tubing for the water pump
- - humidity sensor
-
+ - 10K ohm resistor
+ - diode 1N400
+ - transitor
+ - galvanised screws (2x)
+ 
 ## Software Set up Steps:
 ### - encrypt MicroSD card with Raspberry Pi OS
   - You can do this from the Raspberry Pi official webstie - download the imager
