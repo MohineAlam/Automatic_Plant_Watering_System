@@ -2,7 +2,7 @@
  (In this tutorial the moisture sensor will be made from scratch as it is more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor :))
 
 ## Material you will need:
-###Single board computer and expansions
+### Single board computer and expansions
  - Raspberry Pi
  - Explorer hat pro
  - Micro SD card and Micro SD adapter
