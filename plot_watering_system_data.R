@@ -1,3 +1,4 @@
+options(repos = c(CRAN = "https://cran.uk.r-project.org/"))
 # Install and load necessary R packages
 install.packages("ggplot2")
 install.packages("lubridate")
@@ -10,7 +11,7 @@ library(reticulate)
 library(gridExtra)
 
 # define python scipt to be run
-python_script <- "log_moisture.py"
+python_script <- "/c/Users/Mohin/watering_system/Automatic-Plant-Watering-System/log_moisture.py" #path to script
 
 # start python logging script in the background
 py_run_string(sprintf("import subprocess; subprocess.Popen(['python', '%s'])", python_script))
@@ -30,6 +31,8 @@ plot_data <- function() {
 	# read the log data
 	log_data <- read.csv(log_file, stringsAsFactors = FALSE)
 	
+	# log data
+	log_data$Timestamp <- as.POSIXct(log_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
 	# convert pump status to binary for plotting
 	log_data$PumpStatusBinary <- ifelse(log_data$PumpStatus == "ON", 1, 0)
 	
@@ -53,5 +56,5 @@ plot_data <- function() {
 # continuously update the plots in real-time
 while (TRUE) {
 	plot_data()
-	Sys.sleep(604800) # update interval in seconds = 1 week
+	Sys.sleep(10) # update interval in seconds = 10 seconds
 }

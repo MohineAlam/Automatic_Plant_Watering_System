@@ -14,4 +14,4 @@ def read_sensor():
 # return read
 sensor_value = read_sensor()
 print(f"The voltage from you sensor is: {sensor_value}V.")
-print("Your sensor is functioning as normal. Remember to test both dry and wet soil (saturated)!")
+print("Your sensor is functioning as normal. Remember to test both dry and wet soil! Use the sensor_read_output.py script :)")
