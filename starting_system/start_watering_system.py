@@ -5,8 +5,8 @@ import csv
 
 # convert reading into humidity
 def convert_to_humidity(analogue_value):
-	min_analogue = 0.04 #dry soil read (write the path to the text document you make from testing humidity) 
-	max_analogue = 0.40 #saturated soil read (write the path to the text document you make from testing humidity)
+	min_analogue = 0.04 #dry soil read (write the path to the csv document you make from calibrate_sensor_read_values_DryWet.py)
+	max_analogue = 0.40 #saturated soil read (write the path to the csv document you make from calibrate_sensor_read_values_DryWet.py)
 	min_humidity = 0
 	max_humidity = 100
 	humidity = (analogue_value - min_analogue) * (max_humidity - min_humidity) / (max_analogue - min_analogue) + min_humidity
