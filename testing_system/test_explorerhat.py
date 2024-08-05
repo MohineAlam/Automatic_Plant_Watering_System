@@ -9,6 +9,6 @@ def explorerhat_test():
  explorerhat.light.blue.on()
  explorerhat.light.red.on()
  explorerhat.light.green.on()
- print("Did you see the flash?")
+ print("Did you see the flash? If so, the explorer hat pro is working fine!")
 
 explorerhat_test()
