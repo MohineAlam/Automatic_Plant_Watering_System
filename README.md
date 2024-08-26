@@ -33,11 +33,11 @@
  - Run the command: 
    python test_explorerhat.py
  - You should see all three LED colours flash
-## - To check that the water pump has been connected to the motor port correctly:
+### - To check that the water pump has been connected to the motor port correctly:
  - Place the water pump inside a container with water and the plastic tubing inside a recipient container 
  - Run the command: python test_pump.py
  - The terminal should show the message "Running water pump test...", following water pumped into the empty container for 5 seconds, then you should see the message "Pump test was a success!"
-## - To check that the moisture sensore has been made correctly and connected to the analog one, output one and ground correctly
+### - To check that the moisture sensore has been made correctly and connected to the analog one, output one and ground correctly
  - Make sure all the jumper wires are in the correct terminals and the screws are inside the soil of your plant, you will do this twice for dry and wet soil
  - Run the command:
    python test_sensor.py 
