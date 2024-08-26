@@ -20,8 +20,10 @@
  - Jumper wires
  
 ## Software Set Up Steps (for Linux systems - Ubuntu/Debian-based):
-### - Encrypt MicroSD card with Raspberry Pi OS
+### Set up the Raspberry Pi
+## - Encrypt MicroSD card with Raspberry Pi OS
   - You can do this from the Raspberry Pi official website using the micro SD adapter - download the imager
+  - You can now set up the Raspberry Pi hardware - in the hardware set up steps
 ### - Install python
  - open up the terminal and run the following commands in your virtual environment:
 	sudo apt update
@@ -44,7 +46,21 @@
  - Install the explorer hat pro library in the virtual environment:
         pip install explorerhat
 
+## Hardware Set Up Steps
+### Set up the Raspberry Pi
+## - MicroSD
+ - insert the SD card into the Raspberry Pi SD slot
+## - Explorer Hat Pro
+ - insert the 40 pin GPIO connector ontop of the pins on the Raspberry Pi
+ - stick the bread board ontop of the Explorer Hat Pro
+## - Wires, monitor, keyboard, and mouse
+ - connect the power supply to the Raspberry Pi power port
+ - connect the HDMI cable to the Raspberry Pi HDMI port and the other end to the computer monitor port
+ - connect the keyboard and mouse to the Raspberry Pi using the USB port 
+ - your Raspberry Pi can now be accessed
+
 ## Test Runs Using Repository Scripts
+ - Copy the github repository into your virtual enviornment using the clone link
 ### - To check that the explorer hat has been connected to the 40 pin GPIO connector on the Raspberry Pi correctly:
  - Make sure you have placed the hat with the bread board ontop of the Pi before the next step
  - Run the command: 
@@ -59,6 +75,4 @@
  - Run the command:
 	python test_sensor.py 
  - The terminal should show the message "Running sensor test..." and "The voltage from your sensor is: (your voltage)"
-
-### - Install python dependencies 
 
