@@ -1,5 +1,5 @@
 # Automatic-Plant-Watering-System with Raspberry Pi
- (In this tutorial the moisture sensor will be made from scratch as it is more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor :))
+ (In this tutorial the moisture sensor will be made from scratch and the water pump will be modified to make it safer. The sensor will be more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor as well as a ready made pump:))
 
 ## Material you will need:
 ### Single board computer and expansions
@@ -21,7 +21,7 @@
  
 ## Software Set Up Steps (for Linux systems - Ubuntu/Debian-based):
 ### Set up the Raspberry Pi
-## - Encrypt MicroSD card with Raspberry Pi OS
+### - Encrypt MicroSD card with Raspberry Pi OS
   - You can do this from the Raspberry Pi official website using the micro SD adapter - download the imager
   - You can now set up the Raspberry Pi hardware - in the hardware set up steps
 ### - Install python
@@ -46,33 +46,37 @@
  - Install the explorer hat pro library in the virtual environment:
         pip install explorerhat
 
-## Hardware Set Up Steps
-### Set up the Raspberry Pi
-## - MicroSD
+## Hardware Set Up Steps - Set up the Raspberry Pi
+### - MicroSD
  - insert the SD card into the Raspberry Pi SD slot
-## - Explorer Hat Pro
+### - Explorer Hat Pro
  - insert the 40 pin GPIO connector ontop of the pins on the Raspberry Pi
  - stick the bread board ontop of the Explorer Hat Pro
-## - Wires, monitor, keyboard, and mouse
+### - Wires, monitor, keyboard, and mouse
  - connect the power supply to the Raspberry Pi power port
  - connect the HDMI cable to the Raspberry Pi HDMI port and the other end to the computer monitor port
  - connect the keyboard and mouse to the Raspberry Pi using the USB port 
  - your Raspberry Pi can now be accessed
+#### find the rest of the hardware steps to make the sensor, modify the pump, and set up the parts on the Raspberry Pi in the wiki tutorial!
 
-## Test Runs Using Repository Scripts
+## Test Runs Using Repository Scripts (after complete hardware set up)
  - Copy the github repository into your virtual enviornment using the clone link
 ### - To check that the explorer hat has been connected to the 40 pin GPIO connector on the Raspberry Pi correctly:
  - Make sure you have placed the hat with the bread board ontop of the Pi before the next step
  - Run the command: 
 	python test_explorerhat.py
- - You should see all three LED colours flash
+ - You should see all three LED colours flash and a message to you
 ### - To check that the water pump has been connected to the motor port correctly:
  - Place the water pump inside a container with water and the plastic tubing inside a recipient container 
- - Run the command: python test_pump.py
- - The terminal should show the message "Running water pump test...", following water pumped into the empty container for 5 seconds, then you should see the message "Pump test was a success!"
+ - Run the command: 
+	python test_pump.py
+ - The terminal should show you two messages and water should be pumped into the empty container for 5 seconds
 ### - To check that the moisture sensor has been made correctly and connected to the analog one, output one and ground correctly
- - Make sure all the jumper wires are in the correct terminals and the screws are inside the soil of your plant, you will do this twice for dry and wet soil
+ - Make sure all the jumper wires are in the correct terminals and the screws are inside the soil of your plant
  - Run the command:
 	python test_sensor.py 
- - The terminal should show the message "Running sensor test..." and "The voltage from your sensor is: (your voltage)"
-
+ - The terminal should show you a message and the voltage from your sensor
+### - To check that the sensor and pump communicate correctly
+ - Run the command:
+	python test_pump_sensor_communication.py
+ - If the pump and sensor communicate successfully, you should see messages on the terminal, the voltage unit, and (if the plant needs watering) the pump switched on
