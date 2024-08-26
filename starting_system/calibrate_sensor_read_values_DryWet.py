@@ -26,7 +26,7 @@ def sensor_switch_dry():
 	                	writer = csv.writer(file)
         	        	writer.writerow([condition,value])
 			break
-		elif:
+		elif user_prompt == "n":
 			print("Run script again to re-start")
 			return False
 		else:
@@ -47,15 +47,15 @@ def sensor_switch_wet():
                         	writer = csv.writer(file)
                         	writer.writerow([condition,value])
 			break
-		elif:
+		elif user_prompt == "n":
                		print("Run script again to re-start")
                		return False
 		else:
-			print("Invalid input... Press (y) to continue or (n) to exit").strip().lower()
+			print("Invalid input... Press (y) to continue or (n) to exit")
 
 # execution of functions:
-if sensor_switch_dry() is not False:
-	if sensor_switch_wet() is not False:
+if sensor_switch_dry() is not False: # call sensor_switch_dry() function
+	if sensor_switch_wet() is not False: # calls sensor_swtich_wet() function if first function is called
 		print("Measurements completed successfully! Make sure the .csv file has correctly recorded the soil measurements.")
 	else:
 		print("Wet soil measurement was not performed!")
