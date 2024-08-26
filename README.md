@@ -26,23 +26,23 @@
   - You can now set up the Raspberry Pi hardware - in the hardware set up steps
 ### - Install python
  - open up the terminal and run the following commands in your virtual environment:
-sudo apt update
-sudo apt install python3
-sudo apt install python3-pip
-python3 --version
+-sudo apt update
+-sudo apt install python3
+-sudo apt install python3-pip
+-python3 --version
  - if the python version is shown, python has successfully been installed
 ### - Install R - optional, you can also parse data in python
  - follow this website to download the correct version of R for you: https://cran.r-project.org/
 ### - Install virtual environment
  - Set up a virtual environment to set up your automatic watering system, following the commands:
-sudo apt install python3-venv
-mkdir Automatic_Watering_System
-cd Automatic_Watering_System
-python -m venv myenv
+-sudo apt install python3-venv
+-mkdir Automatic_Watering_System
+-cd Automatic_Watering_System
+-python -m venv myenv
  - within "myenv" (source myenv/bin/activate) you avoid virtual environment interfering with the system Python or other environments
 ### - Install Explorer Hat Pro
  - Install the explorer hat pro library in the virtual environment:
-pip install explorerhat
+-pip install explorerhat
 
 ## Hardware Set Up Steps - Set up the Raspberry Pi
 ### - MicroSD
@@ -62,19 +62,19 @@ pip install explorerhat
 ### - To check that the explorer hat has been connected to the 40 pin GPIO connector on the Raspberry Pi correctly:
  - Make sure you have placed the hat with the bread board ontop of the Pi before the next step
  - Run the command: 
-python test_explorerhat.py
+-python test_explorerhat.py
  - You should see all three LED colours flash and a message to you
 ### - To check that the water pump has been connected to the motor port correctly:
  - Place the water pump inside a container with water and the plastic tubing inside a recipient container 
  - Run the command: 
-python test_pump.py
+-python test_pump.py
  - The terminal should show you two messages and water should be pumped into the empty container for 5 seconds
 ### - To check that the moisture sensor has been made correctly and connected to the analog one, output one and ground correctly
  - Make sure all the jumper wires are in the correct terminals and the screws are inside the soil of your plant
  - Run the command:
-python test_sensor.py 
+-python test_sensor.py 
  - The terminal should show you a message and the voltage from your sensor
 ### - To check that the sensor and pump communicate correctly
  - Run the command:
-python test_pump_sensor_communication.py
+-python test_pump_sensor_communication.py
  - If the pump and sensor communicate successfully, you should see messages on the terminal, the voltage unit, and (if the plant needs watering) the pump switched on
