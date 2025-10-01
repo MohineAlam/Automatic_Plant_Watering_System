@@ -1,5 +1,5 @@
 # Automatic-Plant-Watering-System with Raspberry Pi
- (In this tutorial the moisture sensor will be made from scratch and the water pump will be modified to make it safer. The sensor will be more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor as well as a ready made pump:))
+ (In this tutorial the moisture sensor will be made from scratch. The sensor will be more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor. :))
 
 ## Material you will need:
 ### Single board computer and expansions
@@ -9,10 +9,7 @@
 ### Water pump materials
  - Submersible water pump (no more than 5V)
  - Tubing for the water pump
- - 1K ohm resistor
- - Diode 1N400
- - Transitor
- - Jumper wires
+ - Jumper wires (optional)
  - Container/pot to hold wter and store the water pump
 ### Moisture sensor materials
  - Galvanised screws (2x)
