@@ -1,5 +1,5 @@
 # Automatic-Plant-Watering-System with Raspberry Pi
- (In this tutorial the moisture sensor will be made from scratch. The sensor will be more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor. :))
+ (In this tutorial the moisture sensor will be made from scratch. The sensor will be more robust compared to a lot of commercial sensors that tend to oxidise! Although you can alternatively purchase a ready made sensor. Otherwise, check out the wiki to assemble the sensor :))
 
 ## Material you will need:
 ### Single board computer and expansions
