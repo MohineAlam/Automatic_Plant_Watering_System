@@ -53,7 +53,7 @@
  - your Raspberry Pi can now be accessed
 #### find the rest of the hardware steps to make the sensor, modify the pump, and set up the parts on the Raspberry Pi in the wiki tutorial!
 
-## Test Runs Using Repository Test Scripts OR test GUI (after complete hardware set up)
+## Test Runs Using Repository Test Scripts OR test GUI, found in the testing_system folder (done after complete hardware set up)
  - Copy the github repository into your virtual enviornment using the clone link etc.
 ## GUI
 ### To use a basic GUI for testing, run the command:
