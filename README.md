@@ -53,8 +53,13 @@
  - your Raspberry Pi can now be accessed
 #### find the rest of the hardware steps to make the sensor, modify the pump, and set up the parts on the Raspberry Pi in the wiki tutorial!
 
-## Test Runs Using Repository Scripts (after complete hardware set up)
- - Copy the github repository into your virtual enviornment using the clone link
+## Test Runs Using Repository Test Scripts OR test GUI (after complete hardware set up)
+ - Copy the github repository into your virtual enviornment using the clone link etc.
+## GUI
+### To use a basic GUI for testing, run the command:
+ - python test_GUI.py
+### You should see a window pop up, you can use the buttons to test for: the sensor, pump, explorer hat, and pump-sensor communication.
+## Manual testing
 ### - To check that the explorer hat has been connected to the 40 pin GPIO connector on the Raspberry Pi correctly:
 #### Make sure you have placed the hat with the bread board ontop of the Pi before the next step
 ##### Run the command: 
