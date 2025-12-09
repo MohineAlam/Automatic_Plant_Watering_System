@@ -31,16 +31,24 @@
  - sudo apt install r-base
    OR
  -  follow this website to download the correct or more up to date version of R for you: https://cran.r-project.org/
-### - Copy repository scripts and set up dependencies within virtual environment
+### - Copy repository scripts and set up dependencies within the virtual environment (myenv)
 #### following the commands:
 - sudo apt install python3-venv
 - mkdir Automatic_Watering_System
 - cd Automatic_Watering_System
 - git clone repository
 - python -m venv myenv
+- cd testing_system/
 #### within "myenv" (source myenv/bin/activate) you avoid virtual environment interfering with the system Python or other environments
 ##### Install requirements within your virtual environment:
 - pip install -r requirements.txt
+#### Enable i2c in raspberry pi to allow communication with hat and raspberry pi
+- sudo raspi-config
+Now follow the steps inside the menu:
+1. Interface Options -> press enter
+2. I2C -> press enter
+3. Select **Yes** to enable I2C
+4. Finish -> choose finish and reboot if prompted
 
 ## Hardware Set Up Steps - Set up the Raspberry Pi
 ### - MicroSD
