@@ -1,1 +1,7 @@
-
+# required python=3.11
+Cap1xxx==0.1.4
+cffi==1.16.0
+ExplorerHAT==0.5.1
+pycparser==2.22
+RPi.GPIO==0.7.1
+smbus-cffi==0.5.1
