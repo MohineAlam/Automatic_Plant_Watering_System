@@ -28,17 +28,19 @@
 - python3 --version
 #### if the python version is shown, python has successfully been installed
 ### - Install R - optional, you can also parse data in python
- - follow this website to download the correct version of R for you: https://cran.r-project.org/
-### - Install virtual environment
-#### Set up a virtual environment to set up your automatic watering system, following the commands:
+ - sudo apt install r-base
+   OR
+ -  follow this website to download the correct or more up to date version of R for you: https://cran.r-project.org/
+### - Copy repository scripts and set up dependencies within virtual environment
+#### following the commands:
 - sudo apt install python3-venv
 - mkdir Automatic_Watering_System
 - cd Automatic_Watering_System
+- git clone repository
 - python -m venv myenv
 #### within "myenv" (source myenv/bin/activate) you avoid virtual environment interfering with the system Python or other environments
-### - Install Explorer Hat Pro
-#### Install the explorer hat pro library in the virtual environment:
-- pip install explorerhat
+##### Install requirements within your virtual environment:
+- pip install -r requirements.txt
 
 ## Hardware Set Up Steps - Set up the Raspberry Pi
 ### - MicroSD
@@ -54,7 +56,7 @@
 #### find the rest of the hardware steps to make the sensor, modify the pump, and set up the parts on the Raspberry Pi in the wiki tutorial!
 
 ## Test Runs Using Repository Test Scripts OR test GUI, found in the testing_system folder (done after complete hardware set up)
- - Copy the github repository into your virtual enviornment using the clone link etc.
+ 
 ## GUI
 ### To use a basic GUI for testing, run the command:
  - python test_GUI.py
