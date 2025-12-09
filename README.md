@@ -26,7 +26,7 @@
 - sudo apt install python3
 - sudo apt install python3-pip
 - python3 --version
-#### if the python version is shown, python has successfully been installed
+#### If the python version is shown, python has successfully been installed
 ### - Install R - optional, you can also parse data in python
  - sudo apt install r-base
    OR
@@ -44,7 +44,7 @@
 - pip install -r requirements.txt
 #### Enable i2c in raspberry pi to allow communication with hat and raspberry pi
 - sudo raspi-config
-Now follow the steps inside the menu:
+#### Now follow the steps inside the menu:
 1. Interface Options -> press enter
 2. I2C -> press enter
 3. Select **Yes** to enable I2C
