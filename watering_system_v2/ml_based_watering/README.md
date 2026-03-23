@@ -6,23 +6,23 @@ Feed this diary into the ml and predict if the plant needs watering today.
 	flowchart TD
 
 		subgraph Data Collection
-			A --> A1[Plant name]
-			A --> A2[Date]
-			A --> A3[Humidity of soil]
-			A --> A4[If watered: Date watered]
-			A --> A5[If watered: Humidty of wet soil]
+			A1[Plant name]
+			A2[Date]
+			A3[Humidity of soil]
+			A4[If watered: Date watered]
+			A5[If watered: Humidty of wet soil]
 		end
 
 		subgraph Model Training
-			B --> B1[Train ml - Manual humidty threshold provided once]
+			B1[Train ml - Manual humidty threshold provided once]
 		end
 
 		subgraph Prediction
-			C --> C1[Model predicts if plant needs watering]
+			C1[Model predicts if plant needs watering]
 		end
 
 		subgraph Future System
-			D --> D1[ (not available currently) integration into automatic watering system ]
+			D1[ (not available currently) integration into automatic watering system ]
 		end
 
 		A1 --> B1
