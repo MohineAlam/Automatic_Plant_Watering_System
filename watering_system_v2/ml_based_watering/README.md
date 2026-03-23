@@ -14,7 +14,7 @@ Feed this diary into the ml and predict if the plant needs watering today.
 		end
 
 		subgraph Model Training
-			B --> B1[Train ml (Manual humidty threshold provided once)]
+			B --> B1[Train ml - Manual humidty threshold provided once]
 		end
 
 		subgraph Prediction
