@@ -1,0 +1,9 @@
+{
+	plant1 : {
+		"threshold" : [0.01], "id" : ""
+	},
+
+	plant2 : {
+		"threshold" : [0.05], "id" : ""
+	}
+}

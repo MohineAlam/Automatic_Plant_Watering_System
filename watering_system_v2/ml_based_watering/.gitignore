@@ -1,0 +1,6 @@
+# ignore graphs created
+*.png
+__pycache__
+*.json
+test*
+diaries
