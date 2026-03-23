@@ -22,7 +22,7 @@ flowchart TD
 		end
 
 		subgraph Future System
-			D1[ (not available currently) integration into automatic watering system ]
+			D1[ not available currently - integration into automatic watering system ]
 		end
 
 		A1 --> B1
