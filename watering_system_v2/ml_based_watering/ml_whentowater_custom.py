@@ -1,4 +1,4 @@
-## librairesdays_since_laste_watered2
+# library
 import json
 from decision_tree_ml import build_tree
 from decision_tree_ml import predict
@@ -9,6 +9,7 @@ import explorerhat
 import sys
 import time
 import numpy as np
+import os
 
 if len(sys.argv) != 3:
         print("Correct usage: python ml_whentowater_custom.py diary.json volt_threshold")
@@ -78,11 +79,13 @@ prediction = predict(x2, tree)
 if prediction == 1:
 	# activate pump
 	print("Plant needs watering! :(")
+	os.system("mpv --speed=0.7  ~/Automatic_Plant_Watering_System/voice_clips/I_need_water.m4a")
 	run_pump()
 	print("Plant successfully watered! :)")
 elif prediction == 0:
 	# message to keep pump off
 	print("No watering needed! :)")
+	print("mpv --speed=1.5  ~/Automatic_Plant_Watering_System/voice_clips/Im_good.m4a")
 	print(f"Humidity value: {humidity}")
 else:
 	# error message
