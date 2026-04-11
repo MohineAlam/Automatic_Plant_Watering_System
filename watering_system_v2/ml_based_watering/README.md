@@ -7,7 +7,7 @@ Feed this diary into the ml and predict if the plant needs watering today. The p
 flowchart TD
 
 		subgraph Data Collection
-			A1[ Plant name, Date, Humidity of soil, (If watered) Date watered, (If watered) Humidity of wet soil ]
+			A1[ Plant name, Date, Humidity of soil, Date watered, Humidity of wet soil ]
 		end
 
 		subgraph Model Training
