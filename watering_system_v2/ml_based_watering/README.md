@@ -27,13 +27,19 @@ flowchart TD
 		end
 
 		subgraph Dashboard
-			D3[ Feed plant data files into dashboard for visual analysis ]
+			D2[ Feed plant data files into dashboard for visual analysis ]
+		end
 
 		A1 --> B1
 		A2 --> B1
 		A3 --> B1
 		A4 --> B1
 		A5 --> B1
+		A1 --> D2
+		A2 --> D2
+		A3 --> D2
+		A4 --> D2
+		A5 --> D2
 		B1 --> C1 --> D1
 ```
 
