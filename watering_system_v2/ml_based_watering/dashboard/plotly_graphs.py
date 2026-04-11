@@ -9,10 +9,10 @@ def multi_line_graph(input_data):
 	# flatten json file
 	for plant, metrics in input_data.items():
 
-		for d, v in zip(metrics["days"], metrics["voltage"]):
+		for d, v in zip(metrics["day"], metrics["voltage"]):
 			rows.append({
 				"plant" : plant,
-				"days" : d,
+				"day" : d,
 				"voltage" : v,
 				"type" : "measurement"
 			})

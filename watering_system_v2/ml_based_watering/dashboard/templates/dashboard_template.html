@@ -3,8 +3,16 @@
 	<title>Plant Dashboard</title>
 </head>
 <body>
-	<h1>🌱 My Plant Dashboard</h1>
-	<h2>Moisture graphs</h2>
-	{{ graph|safe }}
+
+<h1>🌱 My Plant Dashboard</h1>
+
+<h2>Current status</h2>
+<p>Moisture: {{ moisture }}</p>
+<p>Temperature: {{ temperature }}</p>
+<p>Note: {{ note }}</p>
+
+<h3>Moisture graph</h3>
+{{ multi_line_graph|safe }}
+	
 </body>
 </html>
