@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Plant Dashboard</title>
+	<title>Plant Diary Dashboard</title>
 </head>
 <body>
 
@@ -9,10 +9,12 @@
 <h2>Current status</h2>
 <p>Moisture: {{ moisture }}</p>
 <p>Temperature: {{ temperature }}</p>
-<p>Note: {{ note }}</p>
 
-<h3>Moisture graph</h3>
+<h3>Daily Moisture</h3>
 {{ multi_line_graph|safe }}
+
+<h4>Moisture Distribution</h4>
+{{ multi_boxplot|safe }}
 	
 </body>
 </html>
