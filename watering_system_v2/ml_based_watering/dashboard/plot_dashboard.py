@@ -5,27 +5,16 @@ import os
 import requests
 import subprocess
 from datetime import datetime
-#from gui.get_outside_temp import get_outside_temp
-#from gui.test_sensor import read_sensor
+from gui.get_outside_temp import get_outside_temp
+from gui.test_sensor import read_sensor
 
 # graphs function
-from plotly_graphs import multi_line_graph
+from dashboard.plotly_graphs import multi_line_graph, multi_boxplot
 
 
 # plant diary input:
 input_data = json.load(open(sys.argv[1]))
 
-def read_sensor():
-	path = os.path.expanduser("~/Automatic_Plant_Watering_System/watering_system_v2/ml_based_watering/gui/test_sensor.py")
-	cmd = subprocess.run(["python3", path], capture_output=True, text=True)
-	result = cmd.stdout.strip()
-	return result
-
-def get_outside_temp():
-	path = os.path.expanduser("~/Automatic_Plant_Watering_System/watering_system_v2/ml_based_watering/gui/get_outside_temp.py")
-	cmd = subprocess.run(["python3", path], capture_output=True, text=True)
-	result = cmd.stdout.strip()
-	return result
 #============#
 # create app
 #============#
@@ -35,22 +24,25 @@ app = Flask(__name__)
 # graph input - load graphs
 def dashboard():
 
-	# line graph - import and call line graph using imput
+	# line graph
 
-	# multi line graph - import and call graph using input
+	# multi line graph
 	m_line_graph = multi_line_graph(input_data)
 	m_line_html = m_line_graph.to_html(full_html = False)
+
+	# multi boxplot
+	m_boxplot = multi_boxplot(input_data)
+	m_boxplot_html = m_boxplot.to_html(full_html = False)
 	# current data
 	day = str(datetime.now())
 	moisture = read_sensor()
 	temperature = get_outside_temp()
-	note = None
 
 	return render_template("dashboard_template.html",
 		multi_line_graph=m_line_html,
+		multi_boxplot=m_boxplot_html,
 		moisture=moisture,
-		temperature=temperature,
-		note=note)
+		temperature=temperature)
 #=========#
 # run app
 #=========#
