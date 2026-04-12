@@ -32,7 +32,7 @@ flowchart TD
 ```
 
 # Collect plant data 		
-* ./execute_testing_app.sh diary.json
+* ./gui/execute_testing_app.sh gui/diary.json
 ## input
 - .json file with plant information - { plant, day, voltage, water_day, water_voltage }
 - you can create a new file by running the above bash script with 'none'
@@ -40,7 +40,7 @@ flowchart TD
 - .json file with plant information
 
 # Train ml and predict
-* python ml_whentowater_custom.py diary.json
+* python ml_prediction/ml_whentowater_custom.py diary.json
 ## input
 - diary.json file created previously
 ## output
@@ -48,7 +48,7 @@ flowchart TD
 - 1 or 0 corresponding with 'need watering' or 'all good, no watering needed'
 
 # View dashboard
-* python plot_dashboard.py diary.json
+* python -m dashboard.plot_dashboard gui/diary.json
 ## input
 - diary.json file created previously
 ## output
