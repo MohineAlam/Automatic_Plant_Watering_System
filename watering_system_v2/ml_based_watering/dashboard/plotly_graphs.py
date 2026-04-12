@@ -1,6 +1,9 @@
+# library
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 
+# mult line graph
 def multi_line_graph(input_data):
 
 	# empty row variable to store data frame vaules
@@ -34,7 +37,7 @@ def multi_line_graph(input_data):
 			x = "day",
 			y = "voltage",
 			color = "plant",
-			title = "Plant humidity diary"
+			title = "Humidity vs Day"
 		)
 
 		# add water points
@@ -48,3 +51,39 @@ def multi_line_graph(input_data):
 		)
 
 		return fig
+
+
+# multi plant box plot of voltage/moisture
+def multi_boxplot(input_data):
+	# empty list to store df
+	rows = []
+	# parse json file
+	for plant, metrics in input_data.items():
+		# extract dry voltage
+		for v in metrics["voltage"]:
+			rows.append({
+				"plant" : plant,
+				"voltage" : v,
+				"type" : "not watered"
+			})
+		for v in metrics["water_voltage"]:
+			rows.append({
+				"plant" : plant,
+				"voltage" : v,
+				"type" : "watered"
+			})
+	# create data frame from list
+	df = pd.DataFrame(rows)
+
+	# create box plot
+	fig = px.box(
+		df,
+		x = "plant",
+		y = "voltage",
+		points = "all",
+		color = "type",
+		title = "Watered vs Not Watered"
+	)
+
+	return fig
+
