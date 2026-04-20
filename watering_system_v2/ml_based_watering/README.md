@@ -48,8 +48,9 @@ flowchart TD
 - 1 or 0 corresponding with 'need watering' or 'all good, no watering needed'
 
 # View dashboard
-* python -m dashboard.plot_dashboard gui/diary.json
+* python -m dashboard.plot_dashboard gui/diary.json humidity_threshold
 ## input
 - diary.json file created previously
+- humidity_threshold = voltage for when soil is completely dry
 ## output
 - html dashboard - follow Pi output address or laptop output address 
